@@ -22,7 +22,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -37,20 +37,13 @@
       }
 
       @keyframes bounce {
-        0%, 100%  {transform: translate Y(0) ; }
-        50% {transform: translate Y(-20px) ; }
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
       }
 
       h1 {
         color: #fff;
         font-size: 64px;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
-       
-      h1 {
-        font-size: 64px;
-        color: #fff;
         margin-bottom: 20px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
@@ -87,7 +80,7 @@
             position: relative;
         }
 
-        */ Basketball court pattern overlay */
+        /* Basketball court pattern overlay */
         #desktop::before {
             content: "";
             position: absolute;
@@ -159,7 +152,7 @@
           transform: scale(1.1);
         }
   
-        .icon img {
+        .icon-img {
            width: 60px;
            height: 60px;
            background: white;
@@ -172,7 +165,7 @@
            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
           }
 
-          .icom label {
+          .icon-label {
             color: white;
             font-size: 14px;
             text-align: center;
@@ -190,6 +183,7 @@
           box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
           display: none;
           overflow: hidden;
+          z-index: 10;
         }
 
         .window.open {
@@ -298,7 +292,14 @@
             color: #666;
             line-height: 1.6;
         }
-      </style>
+        .about-section img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            display: block;
+        }      </style>
 </head>
 <body>
     
@@ -322,7 +323,308 @@
     <!-- Desktop Icons -->
     <div class="desktop-icons">
       <div class="icon" onclick="openWindow('legends-window')">
-                <div class="icon-img">🏆</div>
+                <img class="icon-img" src="nba-icon.png" alt="Basketball Legends icon" />
                 <div class="icon-label">Basketball Legends</div>
             </div>
-      
+      <div class="icon" onclick="openWindow('about-window')">
+                <img class="icon-img" src="user-icon.png" alt="About Me icon" />
+                <div class="icon-label">About Me</div>
+            </div>
+            <div class="icon" onclick="openWindow('journey-window')">
+                <img class="icon-img" src="story-icon.png" alt="My Journey icon" />
+                <div class="icon-label">My Journey</div>
+            </div>
+ 
+            <div class="icon" onclick="openWindow('goals-window')">
+                <img class="icon-img" src="target-icon.png" alt="My Goals icon" />
+                <div class="icon-label">My Goals</div>
+            </div>
+ 
+            <div class="icon" onclick="openWindow('music-window')">
+                <img class="icon-img" src="spotify-icon.png" alt="Game Music icon" />
+                <div class="icon-label">Game Music</div>
+            </div>
+        </div>
+          <!-- PART 3: Windows -->
+        
+        <!-- Basketball Legends Window -->
+        <div id="legends-window" class="window" style="top: 100px; left: 200px;">
+            <div class="window-header">
+                <div class="window-title">Basketball Legends</div>
+                <div class="window-buttons">
+                    <div class="window-button minimize"></div>
+                    <div class="window-button maximize"></div>
+                    <div class="window-button close" onclick="closeWindow('legends-window')"></div>
+                </div>
+            </div>
+            <div class="window-content">
+              <h2>Greatest Players of All Time</h2>
+              <div class="player-grid">
+                <div class="player-card">
+                  <div class="player-name">Michael Jordan</div>
+                  <div class="player-league">NBA</div>
+                  <div class="player-stats">6× NBA Champion, 5× MVP, 14× All-Star</div>
+                  <div class="player-info">Known for his scoring ability and clutch performances, Jordan is widely regarded as the greatest basketball player of all time.</div>
+                </div>
+                <div class="player-card">
+                  <div class="player-name">LeBron James</div>
+                  <div class="player-league">NBA</div>
+                  <div class="player-stats">4× NBA Champion, 4× MVP, 17× All-Star</div>
+                  <div class="player-info">A versatile forward known for his athleticism and basketball IQ, LeBron continues to dominate the league in his 20th season.</div>
+                </div>
+                <div class="player-card">
+                  <div class="player-name">Kareem Abdul-Jabbar</div>
+                  <div class="player-league">NBA</div>
+                  <div class="player-stats">6× NBA Champion, 6× MVP, 19× All-Star</div>
+                  <div class="player-info">The NBA's all-time leading scorer, Kareem was known for his unstoppable skyhook shot and longevity in the league.</div>
+                </div>
+                <div class="player-card">
+                  <div class="player-name">Magic Johnson</div>
+                  <div class="player-league">NBA</div>
+                  <div class="player-stats">5× NBA Champion, 3× MVP, 12× All-Star</div>
+                  <div class="player-info">A legendary point guard known for his flashy passes and leadership, Magic was a key figure in the Lakers' Showtime era.</div>
+                </div>
+                <div class="player-card">
+                  <div class="player-name">Diana Taurasi</div>
+                  <div class="player-league">WNBA</div>
+                  <div class="player-info">3× WNBA Champion, WNBA all-time leading scorer. Known as "White Mamba."</div>
+                </div>
+                <div class="player-card">
+                  <div class="player-name">Maya Moore</div>
+                  <div class="player-league">WNBA</div>
+                  <div class="player-info">4× WNBA Champion, WNBA MVP. Took a hiatus to focus on social justice.</div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+         <!-- About Me Window -->
+        <div id="about-window" class="window" style="top: 120px; left: 250px;">
+            <div class="window-header">
+                <div class="window-title">About Me</div>
+                <div class="window-buttons">
+                    <div class="window-button minimize"></div>
+                    <div class="window-button maximize"></div>
+                    <div class="window-button close" onclick="closeWindow('about-window')"></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="about-section">
+                    <h3>Who I Am</h3>
+                    <p>Hi, I'm Elizabeth. I'm from Canada and I am a passionate basketball fan and player, with a deep appreciation for the game and its legends. I love sharing my knowledge and passion for the sport with others. I also play on school and club teams.</p>
+                </div>
+
+                <div class="about-section">
+                    <h3>Team Photo</h3>
+                    <img src="team-photo.jpg" alt="Elizabeth's basketball team" style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.2);" />
+                    <p>Our team after winning the championship this season.</p>
+                </div>
+
+                <div class="about-section">
+                    <h3>My Position</h3>
+                    <p>I play shooting guard and point guard and have been playing basketball for 5 years, but I started being a fan when I was 6.</p>
+                </div>
+                <div class="about-section">
+                    <h3>What I Love About Basketball</h3>
+                    <p>I love my teammates and the relationships I've fostered throughout my basketball journey. I also love the rush and excitement on the court, and I love the post-game pics and food and the pre-game TikToks. Lol, we love dancing on our team. This last season was really competitive, and we actually won the championship in our league!</p>
+                </div>
+                <div class="about-section">
+                    <h3>My Favorite Player</h3>
+                    <p>My favorite player is Stephen Curry because he was the first NBA player I watched play when I was a kid and I've been a huge fan ever since.</p>
+                </div>
+            </div>
+        </div>
+<!-- My Journey Window -->
+        <div id="journey-window" class="window" style="top: 140px; left: 300px;">
+            <div class="window-header">
+                <div class="window-title">My Basketball Journey</div>
+                <div class="window-buttons">
+                    <div class="window-button minimize"></div>
+                    <div class="window-button maximize"></div>
+                    <div class="window-button close" onclick="closeWindow('journey-window')"></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="about-section">
+                    <h3>How I Started</h3>
+                    <p>I started playing basketball seriously when I was 11 years old. My first memory of playing was when I was in grade 6 and my physical education teacher encouraged me to join the team. And I did! I was not the best, but I improved over time by spending my summers at the park practicing. I became more confident and skilled.</p>
+                </div>
+ 
+                <div class="about-section">
+                    <h3>My Best Game</h3>
+                    <p>My best game was actually this year when we played against Dakota Collegiate for the championship. It was a packed game, and the score was 45 us to 43 them with 1:10 seconds left on the shot clock. We were slowing down our offense but tightening our defense. The crowd was intense. After the star player on the opposing team fouled out, they called a timeout and we were happy. Then, towards the last 30 seconds, some girl took a 3 and it almost went in, but luckily it spun right out. Then we got possession and just dribbled until the buzzer, and we won! It was the most intense game I've ever played, but at least we ended the season on a high note and brought the trophy to our school.</p>
+                </div>
+
+                <div class="about-section">
+                    <h3>Team Photo</h3>
+                   <img
+                     src="team-photo.jpg"
+                      alt="My basketball team"
+                        style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,.2);"
+                          />
+                          <p>Our 2025 championship team after winning the final game.</p>
+                          </div>
+ 
+                <div class="about-section">
+                    <h3>My Team</h3>
+                    <p>I played for the school team, grade 9 girls, because we had no JV team. My teammates are like the best friends I could ask for. They are all fun, energetic, all-round great people, and they are supportive. We all help each other improve on our weak skills. We also love making TikTok dances before our games—at times, not always. We are serious haha, but before practices, and we always bring snacks and food. But I really love all of them, and I hope we all make the team next year.</p>
+                </div>
+ 
+                <div class="about-section">
+                    <h3>Skills I've Learned</h3>
+                    <p>Basketball has taught me discipline, teamwork, perseverance, and so much more.</p>
+                </div>
+            </div>
+        </div>
+          <!-- My Goals Window -->
+        <div id="goals-window" class="window" style="top: 160px; left: 350px;">
+            <div class="window-header">
+                <div class="window-title">My Goals</div>
+                <div class="window-buttons">
+                    <div class="window-button minimize"></div>
+                    <div class="window-button maximize"></div>
+                    <div class="window-button close" onclick="closeWindow('goals-window')"></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="about-section">
+                    <h3>This Season</h3>
+                    <p>This season I want to make varsity,improve my shooting and ball handling skills.</p>
+                </div>
+ 
+                <div class="about-section">
+                    <h3>Long Term Goals</h3>
+                    <p>In the future, I hope to maybe play in college and coach later on .</p>
+                </div>
+ 
+                <div class="about-section">
+                    <h3>What I'm Working On</h3>
+                    <p>Right now I'm practicing improving my shooting and ball handling skills.</p>
+                </div>
+ 
+                <div class="about-section">
+                    <h3>How I Stay Motivated</h3>
+                    <p>I stay motivated by watching highlights, listening to music, and training with friends.</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- Music/Spotify Window -->
+        <div id="music-window" class="window" style="top: 180px; left: 400px; height: 550px;">
+            <div class="window-header">
+                <div class="window-title">🎵 Game Day Music</div>
+                <div class="window-buttons">
+                    <div class="window-button minimize"></div>
+                    <div class="window-button maximize"></div>
+                    <div class="window-button close" onclick="closeWindow('music-window')"></div>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="about-section">
+                    <h3>My Warmup Playlist</h3>
+                    <p>Music I listen to before games 🔥</p>
+                    <div style="margin-top: 15px;">
+                        <iframe style="border-radius:12px; margin-top: 10px;" 
+                        src="https://open.spotify.com/embed/playlist/37i9dQZF1DX76Wlfdnj7AP?utm_source=generator" 
+                        width="100%" 
+                        height="152" 
+                        frameborder="0" 
+                        allowfullscreen 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h3>Another Playlist</h3>
+                    <p>More game day vibes 🎶</p>
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3uHu21SBaQ6JqbO5qM8JVd?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        // PART 1: Welcome Screen to Desktop
+        function enterOS() {
+            document.getElementById('welcome-screen').style.display = 'none';
+            document.getElementById('desktop').style.display = 'block';
+        }
+ 
+        // PART 2: Clock Function
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+        }
+        
+        setInterval(updateClock, 1000);
+        updateClock();
+ 
+        // PART 3: Window Management
+        function openWindow(windowId) {
+            const window = document.getElementById(windowId);
+            window.classList.add('open');
+            bringToFront(window);
+        }
+ 
+        function closeWindow(windowId) {
+            document.getElementById(windowId).classList.remove('open');
+        }
+ 
+        // Bring window to front when clicked
+        let zIndex = 1;
+        function bringToFront(windowElement) {
+            zIndex++;
+            windowElement.style.zIndex = zIndex;
+        }
+ 
+        // Make windows draggable
+        const windows = document.querySelectorAll('.window');
+        windows.forEach(window => {
+            const header = window.querySelector('.window-header');
+            let isDragging = false;
+            let currentX;
+            let currentY;
+            let initialX;
+            let initialY;
+ 
+            header.addEventListener('mousedown', (e) => {
+                if (e.target.classList.contains('window-button')) return;
+                
+                isDragging = true;
+                bringToFront(window);
+ 
+                initialX = e.clientX - window.offsetLeft;
+                initialY = e.clientY - window.offsetTop;
+            });
+ 
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    e.preventDefault();
+                    currentX = e.clientX - initialX;
+                    currentY = e.clientY - initialY;
+ 
+                    window.style.left = currentX + 'px';
+                    window.style.top = currentY + 'px';
+                }
+            });
+ 
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+        });
+ 
+        // Click anywhere on window to bring to front
+        windows.forEach(window => {
+            window.addEventListener('mousedown', () => {
+                bringToFront(window);
+            });
+        });
+    </script>
+ 
+</body>
+</html>
+            
