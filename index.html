@@ -31,14 +31,29 @@
       }
 
       .basketball-icon {
-        font-size: 120px;
-        margin-bottom: 30px;
-        animation: bounce 3s infinite;
+        font-size: 80px;
+        margin-bottom: 20px;
       }
 
+      .boot-clock {
+        font-family: 'Courier New', monospace;
+        color: #fff;
+        font-size: 24px;
+        margin-bottom: 14px;
+      }
+
+      .boot-instruction {
+        font-family: 'Courier New', monospace;
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 22px;
+        letter-spacing: 0.05em;
+      }
+
+      /* Reduced animation: smoother and subtle */
       @keyframes bounce {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-20px); }
+        50% { transform: translateY(-8px); }
       }
 
       h1 {
@@ -149,7 +164,7 @@
         }
         
         .icon:hover {
-          transform: scale(1.1);
+          transform: scale(1.02);
         }
   
         .icon-img {
@@ -306,9 +321,10 @@
   <!-- PART 1: Welcome Screen -->
     <div id="welcome-screen">
         <div class="basketball-icon">🏀</div>
-        <h1>Basketball OS</h1>
-        <p class="welcome-text">Your personal basketball-themed operating system</p>
-        <button class="enter-button" onclick="enterOS()">Enter</button>
+        <div class="boot-clock" id="welcome-clock">00:00:00</div>
+        <h1 style="font-size:45px;">Basketball OS</h1>
+        <p class="boot-instruction">Press ENTER or click RUN to start</p>
+        <button class="enter-button" onclick="enterOS()">RUN</button>
     </div>
  
 
@@ -323,23 +339,23 @@
     <!-- Desktop Icons -->
     <div class="desktop-icons">
       <div class="icon" onclick="openWindow('legends-window')">
-        <img class="icon-img" src="https://upload.wikimedia.org/wikipedia/en/0/03/NBA_logo.svg" alt="Basketball Legends icon" />
+        <img class="icon-img" src="images/download (1).png" alt="Basketball Legends icon" />
         <div class="icon-label">Basketball Legends</div>
       </div>
       <div class="icon" onclick="openWindow('about-window')">
-        <img class="icon-img" src="https://img.icons8.com/ios-filled/100/ffffff/user.png" alt="About Me icon" />
+        <img class="icon-img" src="images/download (2).png" alt="About Me icon" />
         <div class="icon-label">About Me</div>
       </div>
       <div class="icon" onclick="openWindow('journey-window')">
-        <img class="icon-img" src="https://img.icons8.com/ios-filled/100/ffffff/book.png" alt="My Journey icon" />
+        <div class="icon-img" style="background:#fff; color:#ff6b35; font-size:32px; display:flex; align-items:center; justify-content:center;">📖</div>
         <div class="icon-label">My Journey</div>
       </div>
       <div class="icon" onclick="openWindow('goals-window')">
-        <img class="icon-img" src="https://img.icons8.com/ios-filled/100/ffffff/target.png" alt="My Goals icon" />
+        <div class="icon-img" style="background:#fff; color:#ff6b35; font-size:32px; display:flex; align-items:center; justify-content:center;">🎯</div>
         <div class="icon-label">My Goals</div>
       </div>
       <div class="icon" onclick="openWindow('music-window')">
-        <img class="icon-img" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Game Music icon" />
+        <img class="icon-img" src="images/download.png" alt="Game Music icon" />
         <div class="icon-label">Game Music</div>
       </div>
     </div>
@@ -414,7 +430,7 @@
 
                 <div class="about-section">
                     <h3>Team Photo</h3>
-                    <img src="team-photo.jpg" alt="Elizabeth's basketball team" style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.2);" />
+                    <img src="images/tmp_64828a57-67a4-45dc-9723-535bde3867db.jpeg" alt="Elizabeth's basketball team" style="width:100%; max-width:600px; border-radius:10px; box-shadow:0 4px 16px rgba(0,0,0,0.2);" />
                     <p>Our team after winning the championship this season.</p>
                 </div>
 
@@ -456,7 +472,7 @@
                 <div class="about-section">
                     <h3>Team Photo</h3>
                    <img
-                     src="team-photo.jpg"
+                     src="images/tmp_64828a57-67a4-45dc-9723-535bde3867db.jpeg"
                       alt="My basketball team"
                         style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,.2);"
                           />
@@ -548,6 +564,23 @@
             document.getElementById('welcome-screen').style.display = 'none';
             document.getElementById('desktop').style.display = 'block';
         }
+
+        function updateWelcomeClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const welcomeClock = document.getElementById('welcome-clock');
+            if (welcomeClock) {
+                welcomeClock.textContent = hours + ':' + minutes + ':' + seconds;
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                enterOS();
+            }
+        });
  
         // PART 2: Clock Function
         function updateClock() {
@@ -556,6 +589,7 @@
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
             document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+            updateWelcomeClock();
         }
         
         setInterval(updateClock, 1000);
