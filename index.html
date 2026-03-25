@@ -16,4 +16,236 @@
       }
 
       /* ========== PART 1: WELCOME SCREEN ========== */
+      #welcome-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .basketball-icon {
+        font-size: 120px;
+        margin-bottom: 30px;
+        animation: bounce 3s infinite;
+      }
+
+      @keyframes bounce {
+        0% 100%  {transform: translate Y(0) ; }
+        50% {transform: translate Y(-20px) ; }
+      }
+
+      h1 {
+        color: #fff;
+        font-size: 64px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+       
+      h1 {
+        font-size: 64px;
+        color: #fff;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .welcome-text {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 40px;
+      }
+
+      .enter-button {
+        padding: 15px 40px;
+        font-size: 18px;
+        color: #ff6b35;
+        background: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+      }
+
+      .enter-button:hover {
+        transform: scale(1.05);
+      }
+
+         /* ========== PART 2: DESKTOP & TOP BAR ========== */
+        #desktop {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to bottom, #ffa500 0%, #ff8c00 100%);
+            position: relative;
+        }
+
+        */ Basketball court pattern overlay */
+        #desktop::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+           
+            background-image:  repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(255, 255, 255, 0.03) 50px,
+                    rgba(255, 255, 255, 0.03) 51px
+                ),
+                 repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(255, 255, 255, 0.03) 50px,
+                    rgba(255, 255, 255, 0.03) 51px
+                );
+            pointer-events: none;
+        }
+       
+        .top-bar {
+          width: 100%;
+          height: 50px;
+          background: rgba(0, 0, 0, 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+          color: white;
+          position: relative;
+          z-index: 1000;
+        }
+
+        .os-title {
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        #clock {
+          font-size: 20px;
+          font-weight: bold;
+        }
       
+        /* Desktop icons */
+        .desktop-icons {
+          display: flex;
+          flex-direction: column;
+          padding: 30px;
+          gap: 20px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .icon {
+          width: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          cursor: pointer;
+          transition: transform 0.2s;
+        }
+        
+        .icon:hover {
+          transform: scale(1.1);
+        }
+  
+        .icon img {
+           width: 60px;
+           height: 60px;
+           background: white;
+           border-radius: 10px;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           font-size: 30px;
+           margin-bottom: 8px;
+           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+          }
+
+          .icom label {
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+          }
+
+          
+        /* ========== PART 3: WINDOWS ========== */
+        .window {
+          position: absolute;
+          width: 600px;
+          height: 400px;
+          background: white;
+          border-radius: 8px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+          display: none;
+          overflow: hidden;
+        }
+
+        .window.open {
+          display: block;
+        }
+
+        .window-header {
+          height: 40px;
+          background: #333;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 15px;
+          cursor: move;
+          user-select: none;
+        }
+
+        .window-title {
+          font-weight: bold;
+        }
+
+        
+        .window-buttons {
+            display: flex;
+            gap: 8px;
+        }
+ 
+        .window-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+ 
+        .close {
+            background: #ff5f56;
+        }
+ 
+        .minimize {
+            background: #ffbd2e;
+        }
+ 
+        .maximize {
+            background: #27c93f;
+        }
+ 
+        .window-content {
+            padding: 20px;
+            height: calc(100% - 40px);
+            overflow-y: auto;
+        }
+
+
+
+
+      </style>
+</head>
+<body>
