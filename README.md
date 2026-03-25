@@ -17,8 +17,8 @@ This project was built following the [Hack Club webOS guide](https://jams.hackcl
   - **My Journey**  - How I started, my best game, championship win
   - **My Goals**  - Season goals and long-term dreams
   - **Game Music**  - Embedded Spotify playlists for warmups and workouts
-- ** Draggable Windows**: All app windows can be moved around
-- ** Window Controls**: Working close/minimize/maximize buttons
+  Draggable Windows: All app windows can be moved around
+-Window Controls: Working close/minimize/maximize buttons
 - **Keyboard Shortcuts**: Press Enter to boot into the OS
  
 ## 🏆 My Basketball Story
