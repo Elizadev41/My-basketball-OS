@@ -9,10 +9,9 @@ This project was built following the [Hack Club webOS guide](https://jams.hackcl
  
 ##  Features
  
-- **Welcome Screen**: Boot-up screen with live clock and Enter key shortcut
+- Welcome Screen: Boot-up screen with live clock and Enter key shortcut
 - **Basketball Court Desktop**: Orange gradient with court grid pattern
-- ** Live Clock**: Real-time clock in the top bar
-- ** 5 Custom Apps**:
+- Live Clock: Real-time clock in the top bar
   - **Basketball Legends**  - Showcasing NBA & WNBA GOATs with their stats
   - **About Me**  - My basketball story and team photos
   - **My Journey**  - How I started, my best game, championship win
