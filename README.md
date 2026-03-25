@@ -21,7 +21,7 @@ This project was built following the [Hack Club webOS guide](https://jams.hackcl
 -Window Controls: Working close/minimize/maximize buttons
 - **Keyboard Shortcuts**: Press Enter to boot into the OS
  
-## 🏆 My Basketball Story
+##  My Basketball Story
  
 I'm Elizabeth from Canada, and I've been playing basketball for 5 years. This season, my grade 9 girls team won the championship in an intense 45-43 final game! This OS is a tribute to the game, my team, and everyone who's been part of my journey.
  
