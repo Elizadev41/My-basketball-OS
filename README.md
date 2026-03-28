@@ -1,61 +1,83 @@
- 🏀 Basketball OS
- 
+🏀 Basketball OS
 
-##  About
- 
-Basketball OS is a fully functional web-based operating system inspired by the game I love. Instead of a boring personal website, I built an entire OS where you can explore my basketball journey, favorite players, goals, and even listen to my game day playlists!
- 
-This project was built following the [Hack Club webOS guide](https://jams.hackclub.com/batch/webOS) with a basketball twist.
- 
-##  Features
- 
-- Welcome Screen: Boot-up screen with live clock and Enter key shortcut
-- **Basketball Court Desktop**: Orange gradient with court grid pattern
-- Live Clock: Real-time clock in the top bar
-  - **Basketball Legends**  - Showcasing NBA & WNBA GOATs with their stats
-  - **About Me**  - My basketball story and team photos
-  - **My Journey**  - How I started, my best game, championship win
-  - **My Goals**  - Season goals and long-term dreams
-  - **Game Music**  - Embedded Spotify playlists for warmups and workouts
-  Draggable Windows: All app windows can be moved around
--Window Controls: Working close/minimize/maximize buttons
-- **Keyboard Shortcuts**: Press Enter to boot into the OS
- 
-##  My Basketball Story
- 
-I'm Elizabeth from Canada, and I've been playing basketball for 5 years. This season, my grade 9 girls team won the championship in an intense 45-43 final game! This OS is a tribute to the game, my team, and everyone who's been part of my journey.
- 
-##  Design
- 
-The OS features:
-- Orange gradient backgrounds inspired by basketball colors
-- Custom basketball court grid overlay
-- Personalized icons and team photos
-- Clean, minimal design following the webOS guide structure
- 
+## About
+
+I made Basketball OS because I really love the game of basketball. It is a website that works like a computer operating system. You can look at my basketball story, my players and what I want to achieve. You can even listen to the music I play before games.
+
+I used the Hack Club guide to build this project but I added my own basketball theme to it.
+
+## Features
+
+- When you first open it you see a screen with a clock that shows the real time. You can press the Enter key to start.
+
+- The background looks like a basketball court, which's really cool.
+
+- There is a clock at the top of the screen that shows the time.
+
+**Basketball Legends**. This is where I talk about the basketball players.
+
+**About Me**. This is my story about playing basketball and my team.
+
+**My Journey**. I write about how I started playing my game and when we won the championship.
+
+**My Goals**. These are the things I want to achieve this season. In the long run.
+
+**Game Music**. You can listen to the music I play to get ready for games.
+
+You can move the windows around on the screen.
+
+- You can close, minimize or make the windows bigger.
+
+- If you press the Enter key you can start using the Basketball OS.
+
+## My Basketball Story
+
+My name is Elizabeth I am from Canada. I have been playing basketball for 5 years. My team won the championship this season. It was a really close game. The score was 45-43. I made this Basketball OS to show how much I love the game my team and everyone who helped me.
+
+## Design
+
+The Basketball OS has:
+
+- Colors that're like the ones used in basketball.
+
+- A special background that looks like a basketball court.
+
+- Icons and team pictures that are just, for me.
+
+- It is designed to be simple and easy to use, like the webOS guide says.
+
 ## Tech Stack
- 
-- **HTML5** - Structure
-- **CSS3** - Styling, animations, gradients
-- **Vanilla JavaScript** - Window management, drag functionality, clock
-- **Spotify Embeds** - Music player integration
- 
- 
 
- 
+- **HTML5**. This is what I used to make the structure of the website.
+
+- **CSS3**. I used this for the colors, animations and gradients.
+
+- **Vanilla JavaScript**. This is what makes the windows move around and the clock work.
+
+- **Spotify Embeds**. I used this to add music to the website.
+
 ## What I Learned
- 
-- How to build a functioning OS interface with HTML/CSS/JS
-- Window dragging and z-index management
-- Working with Date objects for real-time clocks
-- Embedding external content (Spotify)
-- Creating themed, cohesive designs
-- Following project guides and customizing them
- 
-##  Future Improvements
- 
-- [ ] Add more apps (stats tracker, playbook diagrams)
-- [ ] Add maximize/minimize functionality
-- [ ] Mobile responsive design
-- [ ] More animations and transitions
-- [ ] Save window positions to localStorage
+
+- How to make a website that works like a computer operating system.
+
+- How to make windows that you can move around.
+
+- How to make a clock that shows the time.
+
+- How to add things from websites like Spotify.
+
+- How to make a design that looks good and works well.
+
+- How to follow instructions. Make something my own.
+
+## Future Improvements
+
+- Add things you can do on the website like track your stats or look at diagrams of plays.
+
+- Make it so you can make the windows bigger or smaller.
+
+- Make it work well on phones and tablets.
+
+- Add more animations and things that move.
+
+- Save where you put the windows so it remembers time.
